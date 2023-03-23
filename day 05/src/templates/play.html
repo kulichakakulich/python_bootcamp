@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Player</title>
+</head>
+
+<body>
+    <h3>{{ filename }}</h3>
+    <audio controls>
+        <source src="{{ file_path }}" type="audio/mpeg">
+    </audio>
+    <p><a href="{{ url_for('index') }}">Back to sound files</a></p>
+</body>
+
+</html>

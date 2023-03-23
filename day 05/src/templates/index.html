@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sound Files</title>
+</head>
+
+<body>
+    <h1>Sound Files</h1>
+    <ul>
+        {% for file in files %}
+        <li>{{ file }} <a href="{{ url_for('play_file', filename=file) }}">Play</a></li>
+        {% endfor %}
+    </ul>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="file">Upload sound file:</label>
+        <input type="file" name="file" id="file">
+        <input type="submit" value="Upload">
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+    </form>
+</body>
+
+</html>
